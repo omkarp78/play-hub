@@ -1,0 +1,1 @@
+REVOKE EXECUTE ON FUNCTION public.my_weekly_points(date) FROM anon;

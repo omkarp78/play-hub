@@ -1,0 +1,3 @@
+INSERT INTO public.games (id, name, description, difficulty, accent, active, sort_order)
+VALUES ('ghostxo', 'Ghost XO', 'Three pieces each. Your oldest piece fades into a ghost — and it is the only one you can move.', 'Medium', 'violet', true, 10)
+ON CONFLICT (id) DO UPDATE SET name = EXCLUDED.name, description = EXCLUDED.description, difficulty = EXCLUDED.difficulty, accent = EXCLUDED.accent, active = true, sort_order = EXCLUDED.sort_order;
