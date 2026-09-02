@@ -1,0 +1,227 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Play With Friends — soft, playful, mobile-first design system.
+ * Light surfaces, lavender primary, generous radii, soft floating shadows.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 10px);
+  --radius-md: calc(var(--radius) - 6px);
+  --radius-lg: calc(var(--radius) - 2px);
+  --radius-xl: var(--radius);
+  --radius-2xl: calc(var(--radius) + 4px);
+  --radius-3xl: calc(var(--radius) + 8px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-neon: var(--accent);
+  --color-chart-1: var(--primary);
+  --color-chart-2: var(--secondary);
+  --color-chart-3: var(--accent);
+  --color-chart-4: var(--success);
+  --color-chart-5: var(--destructive);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-display: "Baloo 2", ui-rounded, "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 1.25rem;
+
+  --background: #f8f7fc;
+  --foreground: #2d2d2d;
+  --surface: #ffffff;
+  --surface-2: #f2f1fa;
+  --card: #ffffff;
+  --card-foreground: #2d2d2d;
+  --popover: #ffffff;
+  --popover-foreground: #2d2d2d;
+  --primary: #7c6ff2;
+  --primary-foreground: #ffffff;
+  --secondary: #f1eefe;
+  --secondary-foreground: #5b4fd0;
+  --muted: #f3f2fa;
+  --muted-foreground: #6b7280;
+  --accent: #ffb86c;
+  --accent-foreground: #4a3212;
+  --destructive: #ff7b7b;
+  --destructive-foreground: #ffffff;
+  --success: #7bd88f;
+  --success-foreground: #14401f;
+  --warning: #ffb86c;
+  --warning-foreground: #4a3212;
+  --border: #ececf5;
+  --input: #ececf5;
+  --ring: #a78bfa;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #2d2d2d;
+  --sidebar-primary: #7c6ff2;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1eefe;
+  --sidebar-accent-foreground: #5b4fd0;
+  --sidebar-border: #ececf5;
+  --sidebar-ring: #a78bfa;
+
+  --gradient-brand: linear-gradient(135deg, #7c6ff2, #a78bfa);
+  --shadow-soft: 0 8px 24px -12px rgba(45, 40, 90, 0.18);
+  --shadow-float: 0 18px 40px -20px rgba(45, 40, 90, 0.28);
+}
+
+.dark {
+  --background: #111827;
+  --foreground: #f3f4f6;
+  --surface: #1b1f2a;
+  --surface-2: #232838;
+  --card: #232838;
+  --card-foreground: #f3f4f6;
+  --popover: #1b1f2a;
+  --popover-foreground: #f3f4f6;
+  --primary: #8b7dff;
+  --primary-foreground: #14121f;
+  --secondary: #2b3145;
+  --secondary-foreground: #cfc8ff;
+  --muted: #232838;
+  --muted-foreground: #9aa3b5;
+  --accent: #ffb86c;
+  --accent-foreground: #2c1d08;
+  --destructive: #ff8b8b;
+  --destructive-foreground: #2a0f0f;
+  --success: #7bd88f;
+  --success-foreground: #0d2c16;
+  --warning: #ffb86c;
+  --warning-foreground: #2c1d08;
+  --border: #2e3446;
+  --input: #2e3446;
+  --ring: #8b7dff;
+  --sidebar: #1b1f2a;
+  --sidebar-foreground: #f3f4f6;
+  --sidebar-primary: #8b7dff;
+  --sidebar-primary-foreground: #14121f;
+  --sidebar-accent: #2b3145;
+  --sidebar-accent-foreground: #cfc8ff;
+  --sidebar-border: #2e3446;
+  --sidebar-ring: #8b7dff;
+
+  --gradient-brand: linear-gradient(135deg, #8b7dff, #b6a5ff);
+  --shadow-soft: 0 8px 24px -12px rgba(0, 0, 0, 0.55);
+  --shadow-float: 0 18px 40px -20px rgba(0, 0, 0, 0.7);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior-y: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@utility soft-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+@utility glass {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+@utility glass-strong {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-float);
+}
+
+@utility gradient-brand {
+  background-image: var(--gradient-brand);
+}
+
+@utility text-gradient {
+  background-image: var(--gradient-brand);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility glow {
+  box-shadow: var(--shadow-float);
+}
+
+@utility float-card {
+  box-shadow: var(--shadow-float);
+}
+
+@utility safe-bottom {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
