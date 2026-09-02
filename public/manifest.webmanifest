@@ -1,0 +1,29 @@
+{
+  "name": "Play With Friends",
+  "short_name": "Play Friends",
+  "description": "Pick a game and play in seconds. Battle XO, Hand Cricket, Bullseye Rush and more with friends online.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#7c6ff2",
+  "background_color": "#f8f7fc",
+  "categories": ["games", "entertainment", "social"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    {
+      "src": "/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
